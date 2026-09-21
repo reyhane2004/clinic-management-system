@@ -51,22 +51,27 @@ function Doctors() {
 
     axios
       .get(
-        'http://127.0.0.1:8000/api/doctors'
+        'http://127.0.0.1:8000/api/doctors',
+        {
+          headers: {
+            'X-User-Id': user?.id
+          }
+        }
       )
       .then((response) => {
-
+  
         setDoctors(response.data)
-
+  
       })
       .catch((error) => {
-
+  
         console.error(
           'Error fetching doctors:',
           error
         )
-
+  
       })
-
+  
   }
 
 

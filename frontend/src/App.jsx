@@ -516,7 +516,8 @@ return (
 
           {(userRole === 'Admin' ||
             userRole === 'Doctor' ||
-            userRole === 'Receptionist') && (
+            userRole === 'Receptionist' ||
+            userRole === 'Patient') && (
 
             <button
               onClick={() =>
@@ -817,7 +818,8 @@ return (
 
                   {(userRole === 'Admin' ||
                     userRole === 'Doctor' ||
-                    userRole === 'Receptionist') && (
+                    userRole === 'Receptionist' ||
+                    userRole === 'Patient') && (
 
                     <button
                       onClick={() =>
